@@ -4,7 +4,7 @@ import ProjectForm from '../Projects/ProjectForm'
 import styles from './NewProjects.module.css'
 
 function NewProject(){
-    const history = useNavigate()
+    const navigate = useNavigate()
     function createPost(project){
         // inicia o projeto costs com zero
         project.cost = 0
@@ -19,7 +19,7 @@ function NewProject(){
         })
         .then((resp) => resp.json())
         .then((data) => {
-            history.push('/projects', {message: 'Projeto criado com sucesso !!'})
+            navigate.push('./projects', {message: 'Projeto criado com sucesso !!'})
         })
         
     }
