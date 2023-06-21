@@ -1,12 +1,9 @@
 import { useState } from 'react'
 import Input from '../form/Input'
 import SubmitButton from '../form/SubmitButton'
-
-import styles from '../project/ProjectForm.module.css'
-
+import styles from '../Projects/ProjectForm.module.css'
 function ServiceForm({ handleSubmit, btnText, projectData }) {
   const [service, setService] = useState({})
-
   const submit = (e) => {
     e.preventDefault()
     projectData.services.push(service)
@@ -46,3 +43,5 @@ function ServiceForm({ handleSubmit, btnText, projectData }) {
 }
 
 export default ServiceForm
+
+
