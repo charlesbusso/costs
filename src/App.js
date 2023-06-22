@@ -19,21 +19,22 @@ function App() {
       <Navbar/>
       <Routes>
       <Container customClass = "min-height">
-        
+      
           <Route exact path= "/" element= {<Home/>}/>
-          <Route exact path='/projects' element= {<Projects/>}/>
-          <Route exact path='/company' element= {<Company/>}/>
+          <Route path="/projects" element= {<Projects/>}/>
+          <Route path="/company" element= {<Company/>}/>
           
-          <Route exact path='/contact' element = {<Contact/>}/>
+          <Route path="/contact" element = {<Contact/>}/>
           
-          <Route exact path='/newproject' element= {<NewProject/>}/>
-          <Route path='/project/:id'>
+          <Route path="/newproject" element= {<NewProject/>}/>
+          <Route path="/project/:id">
             <Project/>
           </Route>
          
-        
+          
       </Container>
       </Routes>
+      
       
       <Footer/>
       </Router>

@@ -24,8 +24,8 @@ function Projects() {
     
     setTimeout(
       () =>
-        fetch(`http://localhost:5000/projects`, {
-          method: 'GET',
+        fetch(`https://localhost:5000/projects`, {
+          method: "GET",
           headers: {
             'Content-Type': 'application/json',
           },
@@ -40,7 +40,7 @@ function Projects() {
   }, [])
 
   function removeProject(id) {
-    fetch(`http://localhost:5000/projects/${id}`, {
+    fetch(`https://localhost:5000/projects/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

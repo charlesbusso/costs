@@ -24,8 +24,8 @@ function Project() {
     
     setTimeout(
       () =>
-        fetch(`http://localhost:5000/projects/${id}`, {
-          method: 'GET',
+        fetch(`https://localhost:5000/projects/${id}`, {
+          method: "GET",
           headers: {
             'Content-Type': 'application/json',
           },
@@ -47,8 +47,8 @@ function Project() {
       return false
     }
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
-      method: 'PATCH',
+    fetch(`https://localhost:5000/projects/${project.id}`, {
+      method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },
@@ -84,8 +84,8 @@ function Project() {
     
     project.cost = newCost
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
-      method: 'PATCH',
+    fetch(`https://localhost:5000/projects/${project.id}`, {
+      method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },
@@ -110,8 +110,8 @@ function Project() {
     projectUpdated.services = servicesUpdated
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
 
-    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
-      method: 'PATCH',
+    fetch(`https://localhost:5000/projects/${projectUpdated.id}`, {
+      method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },

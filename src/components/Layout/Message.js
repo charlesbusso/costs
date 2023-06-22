@@ -19,6 +19,7 @@ function Message({type, msg}){
     
 
     }, [msg])
+    
     return(
         <>
         {visible && (
